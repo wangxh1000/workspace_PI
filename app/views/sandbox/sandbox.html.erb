@@ -1,0 +1,26 @@
+<h1>It is just a test</h1>
+
+<table>
+  <tr>
+    <th width="10%"><%= @fields[0] %></th>
+    <th><%= @fields[1] %></th>
+    <th width="70%">
+      <dl><%=@fields[2] %> / <%=@fields[3] %> / <%=@fields[5] %></dl>
+    </th>
+    <th><%=@fields[4] %></th>
+  </tr>
+  <% @result.each do |rec| %>
+      <tr>
+        <td><%= format_date(rec[0]) %></td>
+        <td><%= format_testsuiteowner(rec[1]) %></td>
+        <td>
+          <dl><%= rec[2] %></dl>
+          <dl>
+            <div class="<%= rec[3] %>"><%= rec[3] %></div>
+            <div><%= rec[5] %></div>
+          </dl>
+        </td>
+        <td><%= format_timetakenseconds(rec[4]) %></td>
+      </tr>
+  <% end %>
+</table>
