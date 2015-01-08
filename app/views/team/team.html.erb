@@ -1,0 +1,29 @@
+<%= form_tag({controller: "team", action: "team"}, method: "get", class: "form-inline") do %>
+    <fieldset>
+      <legend><strong>Team</strong></legend>
+
+    </fieldset>
+<% end %>
+<br/>
+
+
+<div id="pivot_team_table">
+  <table class="table table-condensed table-hover">
+    <thread>
+      <tr>
+        <%	@fields.each do |head|  %>
+            <th class="span2"><%= head %></th>
+        <% end %>
+      </tr>
+    </thread>
+    <tbody>
+    <% @result.each do |rec| %>
+        <tr>
+          <%	rec.each do |item|  %>
+              <td><%= item %></td>
+          <% end %>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

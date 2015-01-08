@@ -1,4 +1,8 @@
 WorkspacePi::Application.routes.draw do
+  get "team/team"
+
+  get "one_test/one_test"
+
   get "sandbox/sandbox"
 
   # The priority is based upon order of creation:

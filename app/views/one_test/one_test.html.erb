@@ -1,0 +1,53 @@
+
+<%= form_tag({controller: "one_test", action: "one_test"}, method: "get", class: "form-inline") do %>
+    <fieldset>
+      <legend><strong>One Test</strong></legend>
+          <%= label_tag(:test_name_query, "Test:") %>
+          <%= text_field_tag(:test_name_query, '', :class=>"span5", :placeholder=>"请输入与测试相关的关键字...",
+                             :value => (params[:test_name_query] unless params[:test_name_query].blank? ))  %>
+        <%= submit_tag("Search", :class=>"btn-primary span2") %>
+    </fieldset>
+<% end %>
+<br/>
+
+<div id="pivot_one_test_table">
+<table class="table table-condensed table-hover">
+  <thread>
+    <tr>
+        <%	@fields_pivot.each do |head|  %>
+        <th class="span2"><%= head %></th>
+        <% end %>
+    </tr>
+  </thread>
+  <tbody>
+  <% @result_pivot.each do |rec| %>
+      <tr>
+        <%	rec.each do |item|  %>
+            <td><%= item %></td>
+        <% end %>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+
+<div id="history_one_test_table">
+<table class="table table-condensed table-hover">
+  <thread>
+    <tr>
+      <%	@fields_history.each do |head|  %>
+      <th class="span2"><%= head %></th>
+      <% end %>
+    </tr>
+  </thread>
+  <tbody>
+  <% @result_history.each do |rec| %>
+      <tr class="<%= row_class(rec[1]) %>">
+        <td><%= rec[0] %></td>
+        <td><%= rec[1] %></td>
+        <td><%= rec[2].round(1) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>

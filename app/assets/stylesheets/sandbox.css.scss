@@ -2,43 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  table{
-    font-family: sans-serif;
-    font-size: 12px;
-    border-collapse: collapse;
-
-
-    tr{
-      background: #ffffdd;
-      border-collapse: collapse;
-      vertical-align: text-top;
-
-      th{
-        border-bottom: 2px solid #999999;
-        background: #ffcc00;
-      }
-
-      td{
-        border-bottom: 1px solid #999999;
-
-        dl{
-          div{
-            display: inline-block;
-            width: 150px;
-            text-align: center;
-          }
-
-          .ExcludedPassed, .Passed{
-            background: green;
-          }
-
-          .ExcludedFailed, .Failed{
-            background: orangered;
-          }
-        }
-      }
-    }
-  }
-
-}
+//body{
+//  table{
+//    font-family: sans-serif;
+//    font-size: 12px;
+//    border-collapse: collapse;
+//
+//
+//    tr{
+//      background: #ffffdd;
+//      border-collapse: collapse;
+//      vertical-align: text-top;
+//
+//      th{
+//        border-bottom: 2px solid #999999;
+//        background: #ffcc00;
+//      }
+//
+//      td{
+//        border-bottom: 1px solid #999999;
+//
+//        dl{
+//          div{
+//            display: inline-block;
+//            width: 150px;
+//            text-align: center;
+//          }
+//
+//          .ExcludedPassed, .Passed{
+//            background: green;
+//          }
+//
+//          .ExcludedFailed, .Failed{
+//            background: orangered;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

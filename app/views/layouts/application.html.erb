@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WorkspacePi</title>
+  <title>PI.Extension</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap.min", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap-responsive", :media => "all" %>
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id="banner">
+        <%= image_tag("pi_5.jpg") %>
+        <h1>PI.Extension</h1>
+    </div>
 
-<%= yield %>
-
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><a href="/one_test/pivot">One Test</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
 </body>
 </html>
